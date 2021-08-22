@@ -2,8 +2,10 @@ import React from "react";
 import { Button, Image, StyleSheet, Text, View } from "react-native";
 import Product from "./Product";
 
-const HomeScreen = () => {
+const HomeScreen = (props) => {
   const name = ["mizan", "arif", "razib", "mizan"];
+
+  console.log(props);
 
   return (
     <View style={styles.container}>
@@ -15,7 +17,7 @@ const HomeScreen = () => {
         }}
       />
 
-      <Button title="Send" />
+      <Button title="Send" onPress={() => props.navigation.navigate("About")} />
 
       <Product ourname={name} />
     </View>
