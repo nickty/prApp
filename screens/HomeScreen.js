@@ -17,7 +17,14 @@ const HomeScreen = (props) => {
         }}
       />
 
-      <Button title="Send" onPress={() => props.navigation.navigate("About")} />
+      <Button
+        title="About"
+        onPress={() => props.navigation.navigate("About")}
+      />
+      <Button
+        title="Contact"
+        onPress={() => props.navigation.navigate("Contact")}
+      />
 
       <Product ourname={name} />
     </View>
