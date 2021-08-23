@@ -14,20 +14,21 @@ const Main = () => {
         name="One"
         component={screenone}
         options={{
-          tabBarIcon: () => (
+          tabBarIcon: ({ color }) => (
             <View>
-              <Icon name="home" size={30} />
+              <Icon name="home" size={30} color={color} />
             </View>
           ),
+          headerShown: false,
         }}
       />
       <Tab.Screen
         name="Two"
         component={screentwo}
         options={{
-          tabBarIcon: () => (
+          tabBarIcon: ({ color }) => (
             <View>
-              <Icon name="user" size={30} />
+              <Icon name="user" size={30} color={color} />
             </View>
           ),
         }}
